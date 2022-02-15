@@ -48,7 +48,7 @@ class Training:
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
         raise NotImplementedError(
-                'define get_spent_calories in %s.' % (self.__class__.__name__))
+            'define get_spent_calories in %s.' % (self.__class__.__name__))
 
     def show_training_info(self) -> InfoMessage:
         """Вернуть информационное сообщение о выполненной тренировке."""
@@ -139,7 +139,7 @@ def read_package(workout_type: str, data: List[int]) -> Training:
     }
     if workout_type not in sport_type.keys():
         raise NotImplementedError(
-                'workout type %s not found.' % (workout_type))
+            'workout type %s not found.' % (workout_type))
 
     return sport_type[workout_type](*data)
 
